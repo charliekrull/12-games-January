@@ -18,5 +18,16 @@ function Entity:init(x, y, components)
 end
 
 
+function Entity:update(dt)
+  
+  if self.dx ~= 0 and self.dy ~= 0 then
+    self.dx = self.dx/math.sqrt(2)
+    self.dy = self.dy/math.sqrt(2)
+  end
+  
+  self.x = self.x + self.dx * dt
+  self.y = self.y + self.dy * dt
+  
+end
 
 

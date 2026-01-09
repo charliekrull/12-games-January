@@ -32,9 +32,9 @@ end
 
 --check if a table contains a certain element
 
-function table.contains(tbl, element)
+function table.contains(tbl, value)
     for k, content in pairs(tbl) do
-        if content == element then
+        if content == value then
             return true
         end
     end
@@ -144,7 +144,6 @@ function tablesMatch(a, b) --[[returns true if all the same keys leading to all 
         
         if not tablesMatch(va, b[ka]) then
           return false
-          
         end
          
       else

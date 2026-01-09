@@ -3,6 +3,8 @@
 WINDOW_WIDTH = 1024
 WINDOW_HEIGHT = 1024
 
+PLAYER_SPEED = 250
+
 COLORS = {white = {1, 1, 1},
           black = {0, 0, 0},
           red = {1, 0, 0},
