@@ -25,19 +25,28 @@ function love.load() -- called once when the game starts
             title = love.graphics.newFont('fonts/cinzel.regular.otf', 64)
           }
           
-  gTextures = {['MainMenuBG'] = love.graphics.newImage('graphics/Title Screen P-H.png'),
-              ['entities'] = {}}
+  gTextures = {['MainMenuBG'] = love.graphics.newImage('graphics/MainMenuBG.png'),
+                ['atom'] = {}
+                
+              }
+              
+  for i = 1, 12 do -- load in the atom images
+    gTextures.atom[i] = love.graphics.newImage('graphics/Atoms/Orb_'..tostring(i)..'.png')
+  end
+  
+  
+  
+
+  
             
-            
-  gFrames = {['entities'] = {}}
+--  gFrames = {
+--              }
   
+ 
   
-  
-    
-  
+ 
   gStateMachine = StateMachine{['main-menu'] = function() return MainMenuState() end,
-                                ['play'] = function() return PlayState() end,
-                                ['create-character'] = function() return CreateCharacterState() end}
+                                ['play'] = function() return PlayState() end}
   gStateMachine:change('main-menu')
 end
 
